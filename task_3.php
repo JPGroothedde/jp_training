@@ -24,7 +24,7 @@ class Palindrome {
     }
 }
 
-if (Palindrome::isPalindrome('madam'))
+if (Palindrome::isPalindrome('Never Odd Or Even'))
     echo 'Palindrome';
 else
     echo 'Not palindrome';
