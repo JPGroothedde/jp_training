@@ -19,35 +19,24 @@
         <a href="#" data-toggle="modal" data-target="#addNewPersonModal"><span class="glyphicon glyphicon-plus"></span></a>
     </div>
     <div class="row">
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="PersonGrid">
-                <thead>
-                    <tr>
-                        <th colspan="8"><h5>Person Grid</h5></th>
-                    </tr>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Date Of Birth</th>
-                        <th>Email Address</th>
-                        <th>Age</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-
-        <ul class="pagination" id="PersonGridPagination">
-            <!--li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li-->
-        </ul>
+        <table class="table table-striped table-bordered" id="PersonGrid">
+            <thead>
+                <tr>
+                    <th colspan="8"><h5>Person Grid</h5></th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Date Of Birth</th>
+                    <th>Email Address</th>
+                    <th>Age</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
 </div>
 <!-- Bootstrap Modal - To Add New Record -->
@@ -144,7 +133,6 @@ function loadPersonTable() {
             PopulateTable += '<tr><td>'+JsonObject[i].Id+'</td><td>'+JsonObject[i].Name+'</td><td>'+JsonObject[i].Surname+'</td><td>'+JsonObject[i].DateOfBirth+'</td><td>'+JsonObject[i].EmailAddress+'</td><td>'+JsonObject[i].Age+'</td><td>'+'<a href="#" onclick="loadPersonDetails('+JsonObject[i].Id+')"><span class="glyphicon glyphicon-pencil"></span></a>'+'</td>'+'<td>'+'<a href="#" onclick="deletePerson('+JsonObject[i].Id+')"><span class="glyphicon glyphicon-trash"></span></a>'+'</td></tr>';
         });
         $('#PersonGrid tbody').html(PopulateTable);
-
     });
 }
 
